@@ -6,14 +6,22 @@ import { Box, Button, Flex, Grid, Heading, Text } from "@radix-ui/themes";
 function CalculateComplex() {
   const data = Date.now();
 
-  return <Text as="div" suppressHydrationWarning={true}>{data}</Text>;
+  return (
+    <Text as="div" suppressHydrationWarning={true}>
+      {data}
+    </Text>
+  );
 }
 
 function CalculateComplexNoMemo() {
   "use no memo";
   const data = Date.now();
 
-  return <Text as="div" suppressHydrationWarning={true}>{data}</Text>;
+  return (
+    <Text as="div" suppressHydrationWarning={true}>
+      {data}
+    </Text>
+  );
 }
 
 export default function Page() {
@@ -34,10 +42,14 @@ export default function Page() {
 
             <Grid columns="2" rows="1fr 40px" gap="4">
               <Flex direction="column" align="center" justify="end">
-                {new Array(leftSide).fill(null).map((_, index) => <CalculateComplex key={index} />)}
+                {new Array(leftSide).fill(null).map((_, index) => (
+                  <CalculateComplex key={index} />
+                ))}
               </Flex>
               <Flex direction="column" align="center" justify="end">
-                {new Array(rightSide).fill(null).map((_, index) => <CalculateComplexNoMemo key={index} />)}
+                {new Array(rightSide).fill(null).map((_, index) => (
+                  <CalculateComplexNoMemo key={index} />
+                ))}
               </Flex>
               <Flex align="center" justify="center">
                 <Button onClick={() => setLeftSide((n: number) => n + 1)} size="3" variant="soft">

@@ -49,9 +49,7 @@ export default function RootLayout({
       <body>
         <Theme accentColor="orange" grayColor="slate" radius="medium" scaling="110%" asChild>
           <Flex direction="column">
-            <Box asChild>
-              {children}
-            </Box>
+            <Box asChild>{children}</Box>
             <Box asChild>
               <Footer />
             </Box>

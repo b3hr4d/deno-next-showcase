@@ -26,10 +26,11 @@ export default function Page() {
                   <ItemCount kind="comments" delay={3000} />
                 </Suspense>
               </li>
-              <li>
+              <li className="flex">
                 <Suspense fallback={<Skeleton>loading albums...</Skeleton>}>
                   <ItemCount kind="albums" delay={1500} />
                 </Suspense>
+                <button className="ml-2 text-red-500">not implemented</button>
               </li>
               <li>
                 <Suspense fallback={<Skeleton>loading photos...</Skeleton>}>
