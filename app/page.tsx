@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Flex, Heading, Link, Text } from "@radix-ui/themes";
 
 export default function Home() {

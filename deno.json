@@ -5,6 +5,7 @@
     "cron",
     "temporal"
   ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": [
     "**/node_modules/*",
     "**/.next/*"
@@ -18,5 +19,11 @@
   },
   "fmt": {
     "lineWidth": 120
+  },
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "strict": true,
+    "jsx": "preserve"
   }
 }

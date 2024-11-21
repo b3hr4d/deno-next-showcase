@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useActionState, useOptimistic } from "react";
 import { Badge, Box, Button, Flex, Heading, Kbd, Spinner, Text, TextField } from "@radix-ui/themes";
+import { useActionState, useOptimistic } from "react";
 import { sendMessageAction } from "./action.ts";
 import type { FormState } from "./types.ts";
 
